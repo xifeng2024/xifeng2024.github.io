@@ -1,0 +1,133 @@
+/* 自定义样式，确保字体和基础布局与截图相似 */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    /* 页面背景色 */
+}
+
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* 为旋转添加过渡效果 */
+.rotate-transition {
+    transition: transform 0.2s ease-in-out;
+}
+
+/* 导航链接样式 */
+.nav-link {
+    transition: all 0.2s ease-in-out;
+}
+
+/* 一级菜单默认样式 */
+.nav-link.primary-menu {
+    color: #374151; /* text-gray-700 */
+    background-color: transparent;
+}
+
+/* 一级菜单悬停样式 */
+.nav-link.primary-menu:hover {
+    background-color: #f3f4f6; /* hover:bg-gray-100 */
+}
+
+/* 一级菜单激活样式 */
+.nav-link.primary-menu.active {
+    color: #1d4ed8; /* text-blue-700 */
+    background-color: #dbeafe; /* bg-blue-100 */
+}
+
+/* 二级菜单样式 */
+.nav-link.secondary-menu {
+    color: #4b5563; /* text-gray-600 */
+    background-color: transparent;
+}
+
+/* 二级菜单悬停样式 */
+.nav-link.secondary-menu:hover {
+    background-color: #f3f4f6; /* hover:bg-gray-100 */
+}
+
+/* 二级菜单激活样式 */
+.nav-link.secondary-menu.active {
+    color: #1d4ed8; /* text-blue-700 */
+    background-color: #dbeafe; /* bg-blue-100 */
+}
+
+/* 一级菜单按钮样式 */
+.primary-menu-button {
+    color: #374151; /* text-gray-700 */
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+/* 一级菜单按钮悬停样式 */
+.primary-menu-button:hover {
+    background-color: #f3f4f6; /* hover:bg-gray-100 */
+}
+
+/* 一级菜单按钮激活样式 */
+.primary-menu-button.active {
+    color: #1d4ed8; /* text-blue-700 */
+    background-color: #dbeafe; /* bg-blue-100 */
+}
+
+/* 一级菜单按钮图标样式 */
+.primary-menu-button.active svg {
+    color: #1d4ed8; /* text-blue-700 */
+}
+
+/* 侧边栏收起状态样式 */
+.sidebar-collapsed {
+    width: 4rem !important; /* w-16 */
+}
+
+/* 侧边栏收起时隐藏文字 */
+.sidebar-collapsed .menu-text {
+    display: none;
+}
+
+/* 侧边栏收起时隐藏子菜单 */
+.sidebar-collapsed .submenu {
+    display: none;
+}
+
+/* 侧边栏收起时调整图标居中 */
+.sidebar-collapsed .nav-link {
+    justify-content: center;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+/* 侧边栏收起时调整按钮居中 */
+.sidebar-collapsed .primary-menu-button {
+    justify-content: center;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+/* 侧边栏收起时隐藏按钮文字和箭头 */
+.sidebar-collapsed .primary-menu-button .menu-text,
+.sidebar-collapsed .primary-menu-button svg:last-child {
+    display: none;
+}
+
+/* 确保收起状态下图标尺寸不变 */
+.sidebar-collapsed .nav-link svg,
+.sidebar-collapsed .primary-menu-button svg:first-child {
+    width: 20px !important;
+    height: 20px !important;
+    flex-shrink: 0;
+}
+
+/* 收起状态下移除间距 */
+.sidebar-collapsed .nav-link,
+.sidebar-collapsed .primary-menu-button > div {
+    space-x: 0;
+}
+
+/* 收起状态下确保图标容器不压缩 */
+.sidebar-collapsed .nav-link > svg,
+.sidebar-collapsed .primary-menu-button > div > svg {
+    margin: 0;
+}

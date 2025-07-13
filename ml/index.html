@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google AI Studio 副本</title>
+    <!-- 引入 Tailwind CSS 以实现样式 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Inter 字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- 引入自定义样式 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="text-gray-800">
+    <div class="flex flex-col h-screen w-screen overflow-hidden">
+        <!-- 全宽顶部菜单栏 -->
+        <header class="flex items-center justify-between h-16 bg-white border-b border-gray-200 px-6 z-10">
+            <!-- 左侧 Logo -->
+            <div>
+                <h1 class="text-lg font-semibold text-gray-700">Google AI Studio</h1>
+            </div>
+            <!-- 右侧链接和按钮 -->
+            <div class="flex items-center space-x-6">
+                <button
+                    class="px-4 py-2 text-sm font-semibold text-blue-700 bg-blue-100 rounded-full hover:bg-blue-200 transition-colors">Get
+                    API key</button>
+                <a href="#" class="text-sm font-medium text-gray-600 hover:text-black">Studio</a>
+                <a href="#" class="text-sm font-medium text-gray-600 hover:text-black">Dashboard</a>
+                <a href="#" class="text-sm font-medium text-gray-600 hover:text-black flex items-center">
+                    Documentation
+                    <!-- External Link Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="ml-1">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </a>
+                <!-- Settings Icon -->
+                <button class="p-2 text-gray-500 rounded-full hover:bg-gray-100 hover:text-gray-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path
+                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                        </path>
+                    </svg>
+                </button>
+                <!-- Avatar -->
+                <div
+                    class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                    A
+                </div>
+            </div>
+        </header>
+
+        <!-- 主体内容区 (侧边栏 + 文件列表) -->
+        <div class="flex flex-1 overflow-hidden">
+            <!-- 左侧边栏 -->
+            <aside id="sidebar" class="w-64 flex flex-col justify-between bg-white border-r border-gray-200 p-2 transition-all duration-300">
+                <!-- 导航菜单 -->
+                <nav class="flex flex-col space-y-1 px-2 mt-4">
+                    <a href="#" data-page="yinyang.html"
+                        class="nav-link primary-menu flex items-center space-x-3 px-3 py-2 text-sm font-medium rounded-md">
+                        <!-- Yin Yang Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 2a10 10 0 0 0 0 20 5 5 0 0 0 0-10 5 5 0 0 1 0-10z"></path>
+                            <circle cx="12" cy="7" r="1.5" fill="currentColor"></circle>
+                            <circle cx="12" cy="17" r="1.5" fill="none"></circle>
+                        </svg>
+                        <span class="menu-text">阴阳五行</span>
+                    </a>
+                    <a href="#" data-page="tgdz.html"
+                        class="nav-link primary-menu flex items-center space-x-3 px-3 py-2 text-sm font-medium rounded-md">
+                        <!-- Calendar/Time Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                            <circle cx="8" cy="14" r="1"></circle>
+                            <circle cx="12" cy="14" r="1"></circle>
+                            <circle cx="16" cy="14" r="1"></circle>
+                            <circle cx="8" cy="18" r="1"></circle>
+                            <circle cx="12" cy="18" r="1"></circle>
+                        </svg>
+                        <span class="menu-text">天干地支</span>
+                    </a>
+                    <a href="#" data-page="xchhh.html"
+                        class="nav-link primary-menu flex items-center space-x-3 px-3 py-2 text-sm font-medium rounded-md">
+                        <!-- Network/Connection Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <circle cx="6" cy="6" r="3"></circle>
+                            <circle cx="18" cy="6" r="3"></circle>
+                            <circle cx="6" cy="18" r="3"></circle>
+                            <circle cx="18" cy="18" r="3"></circle>
+                            <line x1="9" y1="9" x2="15" y2="15"></line>
+                            <line x1="9" y1="15" x2="15" y2="9"></line>
+                            <line x1="9" y1="6" x2="15" y2="6"></line>
+                            <line x1="6" y1="9" x2="6" y2="15"></line>
+                            <line x1="18" y1="9" x2="18" y2="15"></line>
+                            <line x1="9" y1="18" x2="15" y2="18"></line>
+                        </svg>
+                        <span class="menu-text">刑冲害化合</span>
+                    </a>
+                    <!-- History Section (Interactive) -->
+                    <div>
+                        <button id="history-button"
+                            class="primary-menu-button w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-md">
+                            <div class="flex items-center space-x-3">
+                                <!-- History Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                                    <path d="M3 3v5h5"></path>
+                                    <path d="M12 7v5l4 2"></path>
+                                </svg>
+                                <span class="menu-text">一级菜单</span>
+                            </div>
+                            <!-- Chevron Down Icon -->
+                            <svg id="history-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="rotate-transition rotate-180">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <!-- Collapsible Sub-menu -->
+                        <div id="history-submenu" class="submenu mt-1 pl-6 space-y-1">
+                            <a href="#" data-page="demo.html"
+                                class="nav-link secondary-menu block px-3 py-2 text-sm rounded-md">二级菜单1</a>
+                            <a href="#" data-page="demo.html"
+                                class="nav-link secondary-menu block px-3 py-2 text-sm rounded-md">二级菜单2</a>
+                            <a href="#" data-page="demo.html"
+                                class="nav-link secondary-menu block px-3 py-2 text-sm rounded-md">二级菜单3</a>
+                        </div>
+                    </div>
+                </nav>
+                <!-- 侧边栏底部 -->
+                <div class="px-2 py-2">
+                    <button id="sidebar-toggle" class="p-2 text-gray-500 rounded-md hover:bg-gray-100 hover:text-gray-800">
+                        <!-- Collapse Icon -->
+                        <svg id="sidebar-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="rotate-transition">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </aside>
+
+            <!-- iframe内容区 -->
+            <main class="flex-1 bg-white overflow-hidden">
+                <iframe id="content-frame" src="demo.html" class="w-full h-full border-0" frameborder="0"></iframe>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // 获取需要操作的元素
+        const historyButton = document.getElementById('history-button');
+        const historySubmenu = document.getElementById('history-submenu');
+        const historyArrow = document.getElementById('history-arrow');
+        const contentFrame = document.getElementById('content-frame');
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const sidebarArrow = document.getElementById('sidebar-arrow');
+
+        // 为 "History" 按钮添加点击事件监听器
+        historyButton.addEventListener('click', () => {
+            // 切换子菜单的显示/隐藏状态
+            const isHidden = historySubmenu.classList.contains('hidden');
+            if (isHidden) {
+                historySubmenu.classList.remove('hidden');
+                historyArrow.classList.add('rotate-180');
+            } else {
+                historySubmenu.classList.add('hidden');
+                historyArrow.classList.remove('rotate-180');
+            }
+        });
+
+        // 为所有导航链接添加点击事件监听器
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const page = link.getAttribute('data-page');
+                if (page && contentFrame) {
+                    contentFrame.src = page;
+                }
+                
+                // 移除所有链接和按钮的活动状态
+                document.querySelectorAll('.nav-link, .primary-menu-button').forEach(l => {
+                    l.classList.remove('active');
+                });
+                
+                // 为当前点击的链接添加活动状态
+                link.classList.add('active');
+            });
+        });
+        
+        // 为一级菜单按钮添加点击事件监听器
+        document.querySelectorAll('.primary-menu-button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                // 移除所有链接和按钮的活动状态
+                document.querySelectorAll('.nav-link, .primary-menu-button').forEach(l => {
+                    l.classList.remove('active');
+                });
+                
+                // 为当前点击的按钮添加活动状态
+                button.classList.add('active');
+            });
+        });
+
+        // 侧边栏切换功能
+        sidebarToggle.addEventListener('click', () => {
+            const isCollapsed = sidebar.classList.contains('sidebar-collapsed');
+            if (isCollapsed) {
+                // 展开侧边栏
+                sidebar.classList.remove('sidebar-collapsed');
+                sidebarArrow.style.transform = 'rotate(0deg)';
+            } else {
+                // 收起侧边栏
+                sidebar.classList.add('sidebar-collapsed');
+                sidebarArrow.style.transform = 'rotate(180deg)';
+                // 收起时也要隐藏子菜单
+                historySubmenu.classList.add('hidden');
+                historyArrow.classList.remove('rotate-180');
+            }
+        });
+
+        // 页面加载时，确保菜单是展开状态，并加载默认页面
+        document.addEventListener('DOMContentLoaded', (event) => {
+            historySubmenu.classList.remove('hidden');
+            // 默认加载第一个页面
+            if (contentFrame) {
+                contentFrame.src = 'yinyang.html';
+            }
+            // 不设置任何菜单项为默认活动状态，只有点击时才高亮
+        });
+    </script>
+</body>
+
+</html>
